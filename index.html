@@ -20,11 +20,11 @@
 			
 			.logo{
 				text-decoration: none;
-				font-size: 40px;
+				font-size: 90px;
 				color: #757575;
 				position: absolute;
 				text-align: center;
-				margin: 500px 0px 0px 1200px;
+				margin: 1200px 0px 0px 2200px;
 				text-shadow:  0 0 10px #fff;
 				animation: fudong 100s infinite;
 			}
@@ -47,10 +47,10 @@
 		</style>
 	</head>
 	<body>
-		<a href="http://lrplrplrp.github.io" class="logo">lrplrplrp</a>
-		<css-doodle grid="10*30" id="cd1">
+		<a href="http://www.baidu.com" class="logo">lrplrplrp</a>
+		<css-doodle grid="15*30" id="cd1">
 			:doodle{
-				@size:2000px 500px;
+				@size:100vm 100vm;
 			}
 			@keyframes move{
 				10%{box-shadow:0px 0px 4px white, 0px 0px 8px white;background:white}
@@ -74,7 +74,7 @@
 			border-radius: 50%;
 			transform:rotate(@r(360deg)) translate(@r(-50, 50)vmin, @r(-50, 50)vmin);
 			animation:move @r(100,200)s infinite linear alternate;
-			zoom:@rn(.1,5,3);
+			zoom:@rn(.1,30,3);
 		</css-doodle>
 		<script>
 			window.addEventListener('mousemove',((e)=>{

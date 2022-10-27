@@ -19,14 +19,23 @@
 			}
 			
 			.logo{
+				z-index: 1;
+				height: 2400px;
+				width: 4400px;
+				font-size: 90px;
+				position: absolute;
+				text-align: center;
+				padding-top: 50%;
+			}
+			
+			.logotext{
+				display: inline-block;
 				text-decoration: none;
 				font-size: 90px;
 				color: #757575;
-				position: absolute;
-				text-align: center;
-				margin: 1200px 0px 0px 2200px;
 				text-shadow:  0 0 10px #fff;
-				animation: fudong 100s infinite;
+				animation: fudong 100s infinite ;
+				transition: 0.5s;
 			}
 			
 			@keyframes fudong{
@@ -40,17 +49,20 @@
 					transform: rotate(-10deg) translate(-50px,-50px);
 				}
 			}
-			.logo:hover{
+			.logotext:hover{
 				color: white;
 				text-shadow:  0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 70px #fff, 0 0 80px #fff, 0 0 100px #fff, 0 0 150px #fff;
 			}
 		</style>
 	</head>
 	<body>
-		<a href="http://lrplrplrp.github.io/demo.html" class="logo">lrplrplrp</a>
-		<css-doodle grid="15*30" id="cd1">
+		<div class="logo">
+			<a href="http://lrplrplrp.github.io/404.html" class="logotext">lrplrplrp<span></span></a>
+		</div>
+		
+		<css-doodle grid="10*30" id="cd1">
 			:doodle{
-				@size:100vm 100vm;
+				@size:500px 500px;
 			}
 			@keyframes move{
 				10%{box-shadow:0px 0px 4px white, 0px 0px 8px white;background:white}
@@ -62,25 +74,24 @@
 				70%{box-shadow:0px 0px 4px white, 0px 0px 8px white;background:white}
 				80%{box-shadow:0px 0px 4px #757575, 0px 0px 8px #757575;background:#757575}
 				90%{box-shadow:0px 0px 4px white, 0px 0px 8px white;background:white}
-				100%{box-shadow:0px 0px 4px #757575, 0px 0px 8px #757575;background:#757575;transform:rotate(0) translate(0,0);}
+				100%{box-shadow:0px 0px 4px #757575, 0px 0px 8px #757575;background:#757575;transform:rotate(0);}
 			}
 			position: absolute;
-			top: @r(1%,100%);
-			left: @r(1%,100%);
+			top: @r(20,80)px;
+			left: @r(40,180)px;
 			width: 2px;
 			height: 2px;
 			box-shadow:0px 0px 2px white;
 			background: #fff;
 			border-radius: 50%;
-			transform:rotate(@r(360deg)) translate(@r(-50, 50)vmin, @r(-50, 50)vmin);
-			animation:move @r(100,200)s infinite linear alternate;
-			zoom:@rn(.1,30,3);
+			transform:rotate(@r(360deg)) translate(@r(-10,10)px,@r(-10,10)px) ;
+			animation:move @r(50,100)s infinite linear alternate;
+			zoom:@rn(5,30,3);
 		</css-doodle>
 		<script>
 			window.addEventListener('mousemove',((e)=>{
 				window.scrollTo(e.x*2,e.y*2);
-			}))
+			}));
 		</script>
 	</body>
 </html>
-

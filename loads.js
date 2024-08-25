@@ -27,8 +27,8 @@ function loadExternalResource(url, type) {
 async function loadScriptsInOrder(){
 	if (screen.width >= 768) {//使用宽度判断设备是否适合加载
 	await Promise.all([
-			loadExternalResource("https://raw.bgithub.xyz/lrplrplrp/live2d/main/pixi.min.js", "js"),
-			loadExternalResource("https://raw.bgithub.xyz/lrplrplrp/live2d/main/live2d.min.js", "js"),
+			loadExternalResource("https://fastly.jsdelivr.net/gh/lrplrplrp/live2d@main/pixi.min.js", "js"),
+			loadExternalResource("https://fastly.jsdelivr.net/gh/lrplrplrp/live2d@main/live2d.min.js", "js"),
 			loadExternalResource("https://fastly.jsdelivr.net/gh/lrplrplrp/live2d@main/live2dcubismcore.min.js", "js"),
 			loadExternalResource("https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js", "js"),
 			loadExternalResource("https://fastly.jsdelivr.net/gh/lrplrplrp/live2d@main/waifu.css", "css"),
